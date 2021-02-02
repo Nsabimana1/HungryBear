@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PancakeBehavior : MonoBehaviour
+public class FoodMovement: MonoBehaviour
 {
 
     private Rigidbody2D rb2d;
