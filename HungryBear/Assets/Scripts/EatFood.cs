@@ -27,14 +27,14 @@ public class EatFood : MonoBehaviour
         if (collision.gameObject.CompareTag("Bird"))
         {
             Debug.Log("ate a bird. Yuck.");
-            GameManager.Instance.IncScore(-1);
+            GameManager.Instance.incScore(-1);
 
             fps.Play();
         }
         else
         {
             Debug.Log("ate a pancake. Yum!");
-            GameManager.Instance.IncScore(1);
+            GameManager.Instance.incScore(1);
 
             pps.Play();
         }

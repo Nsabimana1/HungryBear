@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void incScore() {
-        this.score += 1;
+    public void incScore(int ds) {
+        this.score += ds;
         if(this.score % 10 == 0)
         {
             incFoodSpeed(); 

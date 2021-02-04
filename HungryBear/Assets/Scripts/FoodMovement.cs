@@ -25,7 +25,7 @@ public class FoodMovement: MonoBehaviour
             if (!gameObject.CompareTag("Bird"))
             {
                 Debug.Log("You missed a pancake, loser.");
-                GameManager.Instance.IncScore(-1);
+                GameManager.Instance.incScore(-1);
             }
         }   
     }
