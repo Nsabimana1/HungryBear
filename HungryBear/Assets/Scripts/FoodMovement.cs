@@ -18,6 +18,14 @@ public class FoodMovement: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     if (transform.position.x > 10)
+        {
+            Destroy(gameObject);
+            if (!gameObject.CompareTag("Bird"))
+            {
+                Debug.Log("You missed a pancake, loser.");
+                GameManager.Instance.IncScore(-1);
+            }
+        }   
     }
 }

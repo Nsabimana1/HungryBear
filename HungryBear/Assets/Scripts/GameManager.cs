@@ -30,11 +30,6 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    public void DecScore(int ds)
-    {
-        score -= ds;
-        scoreText.text = "Score: " + score;
-    }
 
     // Start is called before the first frame update
     void Start()

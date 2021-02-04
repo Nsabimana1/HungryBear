@@ -26,6 +26,7 @@ public class ThrowFood : MonoBehaviour
         for (; ;)
         {
             int rand = Random.Range(0, 2);
+
             if (rand == 0)
             {
                 Instantiate(bird);

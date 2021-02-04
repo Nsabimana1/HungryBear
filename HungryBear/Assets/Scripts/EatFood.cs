@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class EatFood : MonoBehaviour
 {
+    public GameObject particles;
+    public GameObject particles2;
+    private ParticleSystem fps;
+    private ParticleSystem pps;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        fps = particles.GetComponent<ParticleSystem>();
+        pps = particles2.GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -21,12 +27,16 @@ public class EatFood : MonoBehaviour
         if (collision.gameObject.CompareTag("Bird"))
         {
             Debug.Log("ate a bird. Yuck.");
-            GameManager.Instance.DecScore(1);
+            GameManager.Instance.IncScore(-1);
+
+            fps.Play();
         }
         else
         {
             Debug.Log("ate a pancake. Yum!");
             GameManager.Instance.IncScore(1);
+
+            pps.Play();
         }
 
         Destroy(collision.gameObject);
