@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
     private int score = 1;
-    public int foodSpeed = 600;
+    public int foodSpeed = 300;
     public TextMeshProUGUI textScore;
 
     private void Awake(){
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public void incScore(int ds) {
         this.score += ds;
-        if(this.score % 10 == 0)
+        if((this.score % 10 == 0) && (this.score > 0))
         {
             incFoodSpeed(); 
         }
@@ -30,7 +30,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void incFoodSpeed() {
-        this.foodSpeed *= 2;
+        double speed =this.foodSpeed * 1.2;
+        int returnspeed = (int)speed;
+        this.foodSpeed = returnspeed;
     }
 
     // Start is called before the first frame update

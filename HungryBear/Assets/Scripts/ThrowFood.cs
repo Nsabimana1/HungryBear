@@ -22,9 +22,17 @@ public class ThrowFood : MonoBehaviour
 
     IEnumerator DropFood()
     {
+
+        
+
         // yield return new WaitForSeconds(2f);
         for (; ;)
         {
+            //float screenX = -10;
+            //float screenY = Random.Range(0, 10);
+            //Vector2 pos = new Vector2(screenX, screenY);
+            
+
             float rand = Random.Range(0f, 2f);
             if (rand > 1f)
             {
@@ -33,10 +41,13 @@ public class ThrowFood : MonoBehaviour
             else if(rand < 1f)
             {
                 Instantiate(pancake);
-            }else {
+            }
+            else
+            {
                 Instantiate(bird);
                 Instantiate(pancake);
             }
+
             // if (rand == 0)
             // {
             //     Instantiate(bird);
@@ -46,6 +57,7 @@ public class ThrowFood : MonoBehaviour
             //     Instantiate(pancake);
             // }
             // yield return new WaitForSeconds(Random.Range(2f, 4f));
+
             yield return new WaitForSeconds(Random.Range(1f, 2f));
         }
     }
