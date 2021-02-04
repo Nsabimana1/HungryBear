@@ -4953,10 +4953,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 342193187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38e1deed23d274dd5a895f398aa10b73, type: 3}
+  m_Script: {fileID: 11500000, guid: b5c2ce84db2e9884fa1c3414442f1a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1554829952}
+  foodSpeed: 600
+  textScore: {fileID: 1554829952}
 --- !u!4 &342193189
 Transform:
   m_ObjectHideFlags: 0
@@ -5090,7 +5091,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.713584
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5197,7 +5198,7 @@ Transform:
   m_GameObject: {fileID: 842924418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.918824, y: 1.304695, z: 1}
+  m_LocalScale: {x: 1.918824, y: 1.304695, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -5589,8 +5590,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040778877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.27, y: 0.1116, z: 0}
-  m_LocalScale: {x: 1.0855547, y: 11.302873, z: 1}
+  m_LocalPosition: {x: -11.57, y: 0.0617, z: 0}
+  m_LocalScale: {x: 1.0855547, y: 9.8565, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -5675,7 +5676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111427711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.96, y: -0.2, z: 0}
+  m_LocalPosition: {x: 8.12, y: 0.14, z: 0}
   m_LocalScale: {x: 0.25, y: 0.3, z: 1}
   m_Children:
   - {fileID: 2113956390}
