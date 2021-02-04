@@ -11,8 +11,8 @@ public class FoodMovement: MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        // rb2d.AddForce(transform.right * 120);
-        rb2d.AddForce(transform.right * 800);
+        int currentSpeed = GameManager.Instance.foodSpeed;
+        rb2d.AddForce(transform.right * currentSpeed);
         
     }
 
