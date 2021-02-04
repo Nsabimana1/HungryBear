@@ -22,20 +22,31 @@ public class ThrowFood : MonoBehaviour
 
     IEnumerator DropFood()
     {
-        yield return new WaitForSeconds(2f);
+        // yield return new WaitForSeconds(2f);
         for (; ;)
         {
-            int rand = Random.Range(0, 2);
-
-            if (rand == 0)
+            float rand = Random.Range(0f, 2f);
+            if (rand > 1f)
             {
                 Instantiate(bird);
             }
-            else
+            else if(rand < 1f)
             {
                 Instantiate(pancake);
+            }else {
+                Instantiate(bird);
+                Instantiate(pancake);
             }
-            yield return new WaitForSeconds(Random.Range(2f, 4f));
+            // if (rand == 0)
+            // {
+            //     Instantiate(bird);
+            // }
+            // else
+            // {
+            //     Instantiate(pancake);
+            // }
+            // yield return new WaitForSeconds(Random.Range(2f, 4f));
+            yield return new WaitForSeconds(Random.Range(1f, 2f));
         }
     }
 }
