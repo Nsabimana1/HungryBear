@@ -44,8 +44,8 @@ public class ThrowFood : MonoBehaviour
                 go2 = Instantiate(pancake);
             }
 
-            go1.transform.position = new Vector2(go1.transform.position.x, Random.Range(-4.9f, 5f));
-            go2.transform.position = new Vector2(go2.transform.position.x, Random.Range(-4.9f, 5f));
+            go1.transform.position = new Vector2(go1.transform.position.x, Random.Range(-4.4f, 4.6f));
+            go2.transform.position = new Vector2(go2.transform.position.x, Random.Range(-4.4f, 4.6f));
 
 
 

@@ -7,9 +7,10 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
-    private int score = 1;
+    private int score = 0;
     public int foodSpeed = 300;
     public TextMeshProUGUI textScore;
+    public int highScore; 
 
     private void Awake(){
         if (Instance == null){
@@ -22,9 +23,12 @@ public class GameManager : MonoBehaviour
 
     public void incScore(int ds) {
         this.score += ds;
-        if((this.score % 10 == 0) && (this.score > 0))
+      
+        if((this.score % 10 == 0) && (this.score > 0) && (score > highScore))
         {
-            incFoodSpeed(); 
+            highScore = score;
+            incFoodSpeed();
+            Debug.Log("food speed: " + foodSpeed);
         }
         this.textScore.text = "Score: " + score;
     }
